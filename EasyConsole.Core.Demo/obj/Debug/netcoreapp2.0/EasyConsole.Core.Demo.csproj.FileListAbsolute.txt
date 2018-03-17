@@ -1,0 +1,13 @@
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\obj\Debug\netcoreapp2.0\EasyConsole.Core.Demo.csprojResolveAssemblyReference.cache
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\obj\Debug\netcoreapp2.0\EasyConsole.Core.Demo.csproj.CoreCompileInputs.cache
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\obj\Debug\netcoreapp2.0\EasyConsole.Core.Demo.AssemblyInfoInputs.cache
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\obj\Debug\netcoreapp2.0\EasyConsole.Core.Demo.AssemblyInfo.cs
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.Demo.deps.json
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.Demo.runtimeconfig.json
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.Demo.runtimeconfig.dev.json
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.Demo.dll
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.Demo.pdb
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.dll
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\bin\Debug\netcoreapp2.0\EasyConsole.Core.pdb
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\obj\Debug\netcoreapp2.0\EasyConsole.Core.Demo.dll
+C:\Users\Dimitris\Source\Repos\EasyConsole.Core\EasyConsole.Core.Demo\obj\Debug\netcoreapp2.0\EasyConsole.Core.Demo.pdb
