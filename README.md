@@ -1,5 +1,5 @@
-# EasyConsole [![NuGet](https://img.shields.io/nuget/v/EasyConsole.svg)](https://www.nuget.org/packages/EasyConsole/)
-EasyConsole is a library to make it easier for developers to build a simple menu interface for a .NET console application.
+# EasyConsole.Core
+EasyConsole.Core is a library to make it easier for developers to build a simple menu interface for a .NET Core console application.
 
 ![Program Demo](https://i.imgur.com/Hlc2QoI.gif)
 
@@ -21,7 +21,7 @@ menu.Display();
 ![Menu Demo](http://i.imgur.com/GXeYOm0.png)
 
 ### Utilities - Input/Output
-EasyConsole also provides input and output utilities to abstract the concept of dealing with the Console.
+EasyConsole.Core also provides input and output utilities to abstract the concept of dealing with the Console.
 
 The `Output` class adds helper methods to control the color of text in the console.
 ```c#
@@ -79,5 +79,5 @@ class MainPage : MenuPage
 As you can see, navigation is handled by the `Program` class. As you navigate through to different pages, the history is logged. You can then invoke `NavigateBack()` if you would like to go back to the previous page.
 
 ## Example Project
-The source code contains an example console demo under the [Demo directory](https://github.com/splttingatms/EasyConsole/tree/master/Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
+The source code contains an example console demo under the [Demo directory](https://github.com/jimtsikos/EasyConsole.Core/tree/master/Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
 
