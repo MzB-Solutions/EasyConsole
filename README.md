@@ -79,5 +79,5 @@ class MainPage : MenuPage
 As you can see, navigation is handled by the `Program` class. As you navigate through to different pages, the history is logged. You can then invoke `NavigateBack()` if you would like to go back to the previous page.
 
 ## Example Project
-The source code contains an example console demo under the [Demo directory](https://github.com/jimtsikos/EasyConsole.Core/tree/master/Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
+The source code contains an example console demo under the [Demo directory](https://github.com/jimtsikos/EasyConsole.Core/tree/master/EasyConsole.Core.Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
 
