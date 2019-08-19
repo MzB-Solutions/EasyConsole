@@ -49,7 +49,7 @@ namespace EasyConsole
             {
                 if (Debugger.IsAttached)
                 {
-                    Input.ReadString("Press [Enter] to exit");
+                    Input.ReadString("Pressione [Enter] para finalizar");
                 }
             }
         }
@@ -80,12 +80,9 @@ namespace EasyConsole
             if (CurrentPage != null && CurrentPage.GetType() == pageType)
                 return CurrentPage as T;
 
-            // leave the current page
-
             // select the new page
-            Page nextPage;
-            if (!Pages.TryGetValue(pageType, out nextPage))
-                throw new KeyNotFoundException("The given page \"{0}\" was not present in the program".Format(pageType));
+            if (!Pages.TryGetValue(pageType, out Page nextPage))
+                throw new KeyNotFoundException("A página fornecida \"{0}\" não estava presente no programa".Format(pageType));
 
             // enter the new page
             History.Push(nextPage);

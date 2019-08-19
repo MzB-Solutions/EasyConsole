@@ -16,7 +16,7 @@ namespace EasyConsole
 
             while (value < min || value > max)
             {
-                Output.DisplayPrompt("Please enter an integer between {0} and {1} (inclusive)", min, max);
+                Output.DisplayPrompt("Por favor digite um inteiro entre {0} e {1} (inclusive)", min, max);
                 value = ReadInt();
             }
 
@@ -30,7 +30,7 @@ namespace EasyConsole
 
             while (!int.TryParse(input, out value))
             {
-                Output.DisplayPrompt("Please enter an integer");
+                Output.DisplayPrompt("Por favor insira um inteiro");
                 input = Console.ReadLine();
             }
 
@@ -48,12 +48,12 @@ namespace EasyConsole
             Type type = typeof(TEnum);
 
             if (!type.IsEnum)
-                throw new ArgumentException("TEnum must be an enumerated type");
+                throw new ArgumentException("TEnum deve ser um tipo enumerado");
 
             Output.WriteLine(prompt);
             Menu menu = new Menu();
 
-            TEnum choice = default(TEnum);
+            TEnum choice = default;
             foreach (var value in Enum.GetValues(type))
                 menu.Add(Enum.GetName(type, value), () => { choice = (TEnum)value; });
             menu.Display();
