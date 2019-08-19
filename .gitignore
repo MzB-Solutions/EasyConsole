@@ -4,3 +4,9 @@
 
 /.vs/EasyConsole.Core/v15
 /.vs
+/EasyConsole.Core/bin/Debug/netcoreapp2.2
+/EasyConsole.Core/obj/Debug/netcoreapp2.2
+/EasyConsole.Core/obj/Release/netcoreapp2.2
+/EasyConsole.Core.Demo/bin/Debug/netcoreapp2.2
+/EasyConsole.Core.Demo/obj/Debug/netcoreapp2.2
+/EasyConsole.Core.Demo/obj/Release/netcoreapp2.2
