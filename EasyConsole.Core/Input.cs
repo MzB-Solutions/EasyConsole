@@ -4,6 +4,26 @@ namespace EasyConsole
 {
     public static class Input
     {
+        #region Public Methods
+
+        public static TEnum ReadEnum<TEnum>(string prompt) where TEnum : struct, IConvertible, IComparable, IFormattable
+        {
+            Type type = typeof(TEnum);
+
+            if (!type.IsEnum)
+                throw new ArgumentException("TEnum must be an enumerated type");
+
+            Output.WriteLine(prompt);
+            Menu menu = new Menu();
+
+            TEnum choice = default;
+            foreach (var value in Enum.GetValues(type))
+                menu.Add(Enum.GetName(type, value), () => { choice = (TEnum)value; });
+            menu.Display();
+
+            return choice;
+        }
+
         public static int ReadInt(string prompt, int min, int max)
         {
             Output.DisplayPrompt(prompt);
@@ -16,7 +36,7 @@ namespace EasyConsole
 
             while (value < min || value > max)
             {
-                Output.DisplayPrompt("Por favor digite um inteiro entre {0} e {1} (inclusive)", min, max);
+                Output.DisplayPrompt("Please enter an integer between {0} and {1} (inclusive)", min, max);
                 value = ReadInt();
             }
 
@@ -30,7 +50,7 @@ namespace EasyConsole
 
             while (!int.TryParse(input, out value))
             {
-                Output.DisplayPrompt("Por favor insira um inteiro");
+                Output.DisplayPrompt("Please enter an integer");
                 input = Console.ReadLine();
             }
 
@@ -43,22 +63,6 @@ namespace EasyConsole
             return Console.ReadLine();
         }
 
-        public static TEnum ReadEnum<TEnum>(string prompt) where TEnum : struct, IConvertible, IComparable, IFormattable
-        {
-            Type type = typeof(TEnum);
-
-            if (!type.IsEnum)
-                throw new ArgumentException("TEnum deve ser um tipo enumerado");
-
-            Output.WriteLine(prompt);
-            Menu menu = new Menu();
-
-            TEnum choice = default;
-            foreach (var value in Enum.GetValues(type))
-                menu.Add(Enum.GetName(type, value), () => { choice = (TEnum)value; });
-            menu.Display();
-
-            return choice;
-        }
+        #endregion Public Methods
     }
 }

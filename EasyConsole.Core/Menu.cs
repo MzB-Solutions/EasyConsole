@@ -19,9 +19,7 @@ namespace EasyConsole
             {
                 Console.WriteLine("{0}. {1}", i + 1, Options[i].Name);
             }
-
-            Console.WriteLine();
-            int choice = Input.ReadInt("Selecione uma opção:", min: 1, max: Options.Count);
+            int choice = Input.ReadInt("Choose an option:", min: 1, max: Options.Count);
 
             Options[choice - 1].Callback();
         }

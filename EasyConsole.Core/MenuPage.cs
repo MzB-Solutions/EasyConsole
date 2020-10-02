@@ -17,8 +17,8 @@
         {
             base.Display();
 
-            if (Program.NavigationEnabled && !Menu.Contains("Voltar"))
-                Menu.Add("Voltar", () => { Program.NavigateBack(); });
+            if (Program.NavigationEnabled && !Menu.Contains("Go back"))
+                Menu.Add("Go back", () => { Program.NavigateBack(); });
 
             Menu.Display();
         }
