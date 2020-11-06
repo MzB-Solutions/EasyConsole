@@ -8,6 +8,18 @@
     <Configurations>Debug;Release;Documentation</Configurations>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\smzb\source\repos\SystemT00ls\EasyConsole.Core\EasyConsole.Core\EasyConsole.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Documentation|AnyCPU'">
+    <DocumentationFile>C:\Users\smzb\source\repos\SystemT00ls\EasyConsole.Core\EasyConsole.Core\EasyConsole.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\smzb\source\repos\SystemT00ls\EasyConsole.Core\EasyConsole.Core\EasyConsole.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ProjectExtensions><VisualStudio><UserProperties BuildVersion_StartDate="2000/1/1" /></VisualStudio></ProjectExtensions>
 
 </Project>
