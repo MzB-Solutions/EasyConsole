@@ -7,9 +7,25 @@ namespace EasyConsole
 {
     public abstract class Program
     {
-        protected string Title { get; set; }
+        #region Private Properties
 
-        public bool BreadcrumbHeader { get; private set; }
+        private Dictionary<Type, Page> _pages { get; set; }
+
+        #endregion Private Properties
+
+        #region Protected Constructors
+
+        protected Program(string title, bool breadcrumbHeader)
+        {
+            Title = title;
+            _pages = new Dictionary<Type, Page>();
+            History = new Stack<Page>();
+            BreadcrumbHeader = breadcrumbHeader;
+        }
+
+        #endregion Protected Constructors
+
+        #region Protected Properties
 
         protected Page CurrentPage
         {
@@ -19,18 +35,56 @@ namespace EasyConsole
             }
         }
 
-        private Dictionary<Type, Page> Pages { get; set; }
+        protected string Title { get; set; }
 
+        #endregion Protected Properties
+
+        #region Public Properties
+
+        public bool BreadcrumbHeader { get; private set; }
         public Stack<Page> History { get; private set; }
 
         public bool NavigationEnabled { get { return History.Count > 1; } }
 
-        protected Program(string title, bool breadcrumbHeader)
+        #endregion Public Properties
+
+        #region Public Methods
+
+        public void AddPage(Page page)
         {
-            Title = title;
-            Pages = new Dictionary<Type, Page>();
-            History = new Stack<Page>();
-            BreadcrumbHeader = breadcrumbHeader;
+            Type pageType = page.GetType();
+
+            if (_pages.ContainsKey(pageType))
+                _pages[pageType] = page;
+            else
+                _pages.Add(pageType, page);
+        }
+
+        public Page NavigateBack()
+        {
+            History.Pop();
+
+            Console.Clear();
+            CurrentPage.Display();
+            return CurrentPage;
+        }
+
+        public void NavigateHome()
+        {
+            while (History.Count > 1)
+                History.Pop();
+
+            Console.Clear();
+            CurrentPage.Display();
+        }
+
+        public T NavigateTo<T>() where T : Page
+        {
+            SetPage<T>();
+
+            Console.Clear();
+            CurrentPage.Display();
+            return CurrentPage as T;
         }
 
         public virtual void Run()
@@ -54,25 +108,6 @@ namespace EasyConsole
             }
         }
 
-        public void AddPage(Page page)
-        {
-            Type pageType = page.GetType();
-
-            if (Pages.ContainsKey(pageType))
-                Pages[pageType] = page;
-            else
-                Pages.Add(pageType, page);
-        }
-
-        public void NavigateHome()
-        {
-            while (History.Count > 1)
-                History.Pop();
-
-            Console.Clear();
-            CurrentPage.Display();
-        }
-
         public T SetPage<T>() where T : Page
         {
             Type pageType = typeof(T);
@@ -81,8 +116,8 @@ namespace EasyConsole
                 return CurrentPage as T;
 
             // select the new page
-            if (!Pages.TryGetValue(pageType, out Page nextPage))
-                throw new KeyNotFoundException("A página fornecida \"{0}\" não estava presente no programa".Format(pageType));
+            if (!_pages.TryGetValue(pageType, out Page nextPage))
+                throw new KeyNotFoundException("The given page \"{0}\" was not present in the program".Format(pageType));
 
             // enter the new page
             History.Push(nextPage);
@@ -90,22 +125,6 @@ namespace EasyConsole
             return CurrentPage as T;
         }
 
-        public T NavigateTo<T>() where T : Page
-        {
-            SetPage<T>();
-
-            Console.Clear();
-            CurrentPage.Display();
-            return CurrentPage as T;
-        }
-
-        public Page NavigateBack()
-        {
-            History.Pop();
-
-            Console.Clear();
-            CurrentPage.Display();
-            return CurrentPage;
-        }
+        #endregion Public Methods
     }
 }

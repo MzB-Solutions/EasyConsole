@@ -2,7 +2,13 @@
 {
     public abstract class MenuPage : Page
     {
+        #region Protected Properties
+
         protected Menu Menu { get; set; }
+
+        #endregion Protected Properties
+
+        #region Public Constructors
 
         public MenuPage(string title, Program program, params Option[] options)
             : base(title, program)
@@ -13,6 +19,10 @@
                 Menu.Add(option);
         }
 
+        #endregion Public Constructors
+
+        #region Public Methods
+
         public override void Display()
         {
             base.Display();
@@ -22,5 +32,7 @@
 
             Menu.Display();
         }
+
+        #endregion Public Methods
     }
 }
