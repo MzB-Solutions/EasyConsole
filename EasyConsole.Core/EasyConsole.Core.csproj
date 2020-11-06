@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>20.11.86</Version>
+    <FileVersion>20.11.86</FileVersion>
+    <AssemblyVersion>20.11.86</AssemblyVersion>
   </PropertyGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties BuildVersion_StartDate="2000/1/1" /></VisualStudio></ProjectExtensions>
 
 </Project>
