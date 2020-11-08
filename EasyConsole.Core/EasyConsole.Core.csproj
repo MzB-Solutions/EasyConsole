@@ -6,6 +6,7 @@
     <FileVersion>20.11.86</FileVersion>
     <AssemblyVersion>20.11.86</AssemblyVersion>
     <Configurations>Debug;Release;Documentation</Configurations>
+    <SonarQubeExclude>true</SonarQubeExclude>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
