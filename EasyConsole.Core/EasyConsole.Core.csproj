@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>20.11.86</Version>
-    <FileVersion>20.11.86</FileVersion>
-    <AssemblyVersion>20.11.86</AssemblyVersion>
+    <Version>20.11.87</Version>
+    <FileVersion>20.11.87</FileVersion>
+    <AssemblyVersion>20.11.87</AssemblyVersion>
     <Configurations>Debug;Release;Documentation</Configurations>
     <SonarQubeExclude>true</SonarQubeExclude>
   </PropertyGroup>
