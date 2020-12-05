@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>20.12.101</Version>
-    <FileVersion>20.12.101</FileVersion>
-    <AssemblyVersion>20.12.101</AssemblyVersion>
+    <Version>20.12.123</Version>
+    <FileVersion>20.12.123</FileVersion>
+    <AssemblyVersion>20.12.123</AssemblyVersion>
     <Configurations>Debug;Release</Configurations>
     <SonarQubeExclude>true</SonarQubeExclude>
     <AssemblyName>EasyConsole</AssemblyName>
